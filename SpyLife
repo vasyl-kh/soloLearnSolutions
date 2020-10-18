@@ -5,6 +5,8 @@ import java.util.List;
 
 public class SpyLife {
     public static void main(String[] args) {
+    
+    // little test of the method
         descryptMsg("a &* v21231a//j");
         descryptMsgF("a &* v21231a//j");
     }
