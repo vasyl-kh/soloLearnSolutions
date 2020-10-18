@@ -1,0 +1,31 @@
+package soloLearnSolutions;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SpyLife {
+    public static void main(String[] args) {
+        descryptMsg("a &* v21231a//j");
+        descryptMsgF("a &* v21231a//j");
+    }
+
+    public static void descryptMsg(String msg){
+        char[] input=msg.toCharArray();
+        List<Character> outList=new ArrayList<>();
+
+        for(int i=input.length-1;i>=0;i--){
+            if(Character.isLetter(input[i])||input[i]==' '){
+                outList.add(input[i]);
+            }
+        }
+        char[] result=new char[outList.size()];
+        int count=0;
+        for (char ch:
+                    outList) {
+            result[count]=ch;
+            count++;
+        }
+        System.out.println(new String(result));
+    }
+   
+}
