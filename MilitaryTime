@@ -1,0 +1,29 @@
+package SoloLearn;
+
+import java.util.Scanner;
+
+public class MilitaryTime {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in); // 1:15 PM  3:00 AM
+        String arg=new String(in.nextLine());
+    }
+    public static void timeFormatter(String arg){ //todo add validation of arg like 13:34 SM
+        
+        String[] wholePart=arg.split(" ");
+        String[] numericalPartArr=wholePart[0].split(":");
+        
+        String hoursPart=numericalPartArr[0];
+        String minutePart=numericalPartArr[1];
+        String indicator=wholePart[1];
+        
+        int hour=Integer.parseInt(hoursPart);
+        int minute=Integer.parseInt(minutePart);
+        
+        if(indicator.charAt(0)=='P')  hour+=12;
+        
+        String out=String.format("%d:%d",hour,minute);
+        System.out.println(out);
+        
+    }
+
+}
